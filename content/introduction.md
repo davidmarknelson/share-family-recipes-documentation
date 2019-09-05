@@ -1,6 +1,5 @@
-## Our API
+## Share Family Recipes API
 
-Welcome to coolcorp biz! This is our API documentation. This documentation
-is generated from normal Markdown files using [docbox](https://github.com/tmcw/docbox),
-so it can use Markdown syntax, like **bold**, *emphasis*, ~~strikethrough~~,
-`code`, and more.
+Welcome to the Share Family Recipes API! This is our API documentation.
+
+The API has email verification, password reset, and uses postgresql for the database.

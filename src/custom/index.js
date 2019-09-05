@@ -5,8 +5,8 @@
  * media queries.
  */
 module.exports.brandNames = {
-  desktop: 'Wobble API Documentation',
-  tablet: 'Wobble API Docs',
+  desktop: 'Share Family Recipes API Documentation',
+  tablet: 'SFR API Docs',
   mobile: 'API Docs'
 };
 
