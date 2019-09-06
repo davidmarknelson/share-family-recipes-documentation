@@ -18,7 +18,15 @@ module.exports =
   fs.readFileSync('./content/users.md', 'utf8') + '\n' +
   '# Email Verification\n' +
   fs.readFileSync('./content/email.md', 'utf8') + '\n' +
+  '# Passwords\n' +
+  fs.readFileSync('./content/passwords.md', 'utf8') + '\n' +
   '# Admin\n' +
   fs.readFileSync('./content/admin.md', 'utf8') + '\n' +
   '# Meals\n' +
-  fs.readFileSync('./content/meals.md', 'utf8') + '\n';
+  fs.readFileSync('./content/meals.md', 'utf8') + '\n' +
+  '# Searches\n' +
+  fs.readFileSync('./content/search.md', 'utf8') + '\n' +
+  '# Saved Meals\n' +
+  fs.readFileSync('./content/savedMeals.md', 'utf8') + '\n' +
+  '# Likes\n' +
+  fs.readFileSync('./content/likes.md', 'utf8') + '\n';

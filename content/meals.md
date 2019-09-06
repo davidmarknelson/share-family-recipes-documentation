@@ -27,6 +27,8 @@ GET /meals/available-names?name={nameofmeal}
 
 Creates a new meal. The request data must be form data. The user's JWT must also be added to the authorization header as a bearer token.
 
+A successful response will contain the id of the meal and a message.
+
 Property | Description
 ---|---
 `name` | The name of the meal.
@@ -48,27 +50,7 @@ POST /meals/create
 ```json
 {
   "id": 1,
-  "name": "Eggs and Rice",
-  "ingredients": [
-    "3 eggs",
-    "rice",
-    "vegetables"
-  ],
-  "instructions": [
-    "cooks eggs",
-    "cook rice",
-    "mix and serve"
-  ],
-  "cookTime": 20,
-  "difficulty": 1,
-  "description": "A delicious and easy dish.",
-  "originalRecipeUrl": "www.recipe.com",
-  "youtubeUrl": "www.video.com",
-  "mealPic": "public/images/mealPics/Eggs-and-Rice.jpeg",
-  "creatorId": 1,
-  "originalName": "Eggs-and-Rice",
-  "updatedAt": "2019-09-04T08:26:31.521Z",
-  "createdAt": "2019-09-04T08:26:31.521Z"
+  "message": "Meal successfully created."
 }
 ```
 
@@ -205,7 +187,9 @@ DELETE /meals/delete
 {
   "message": "There was an error deleting your meal picture."
 }
+```
 
+```json
 {
   "message": "There was an error deleting your meal."
 }

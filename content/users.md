@@ -57,7 +57,7 @@ POST /user/signup
 }
 ```
 
-#### Example Response (200)
+#### Example Response (201)
 
 ```json
 {
