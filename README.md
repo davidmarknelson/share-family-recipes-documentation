@@ -11,3 +11,5 @@ To run the site locally:
 2. `npm install`
 3. `npm start`
 4. Open http://localhost:9966/
+
+These docs are live at https://dnel9281.github.io/share-family-recipes-api-docs/  
