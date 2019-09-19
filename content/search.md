@@ -141,6 +141,8 @@ HTTP Method | Endpoint | Description
 |---|---|---
 `GET` | `/search/byingredients-a-z` | Get meals with specific ingredients listed in alphabetical order.
 `GET` | `/search/byingredients-z-a` | Get meals with specific ingredients listed in reverse alphabetical order.
+`GET` | `/search/byingredients-newest` | Get meals with specific ingredients listed by newest created.
+`GET` | `/search/byingredients-oldest` | Get meals with specific ingredients listed by oldest created.
 
 #### Example Endpoint
 

@@ -2,25 +2,11 @@
 
 ### Get Available Username
 
-Checks for username availability.
+Checks for username availability. The responses have no body.
+The responses will either have a status of `204` for available names or `400` for taken names.
 
 ```endpoint
 GET /user/available-username?username={username}
-```
-#### Example Response (200)
-
-```json
-{
-  "message": "This username is available."
-}
-```
-
-#### Example Response (400)
-
-```json
-{
-  "message": "This username is already taken."
-}
 ```
 
 ### Signup New User

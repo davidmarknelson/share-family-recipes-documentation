@@ -7,9 +7,9 @@
 To run the site locally:
 
 1. Clone this repository
-2. `git clone https://github.com/Dnel9281/share-family-recipes-documentation.git`
+2. `git clone https://github.com/davidmarknelson/share-family-recipes-documentation.git`
 2. `npm install`
 3. `npm start`
 4. Open http://localhost:9966/
 
-These docs are live at https://dnel9281.github.io/share-family-recipes-api-docs/  
+These docs are live at https://davidmarknelson.github.io/share-family-recipes-api-docs/  

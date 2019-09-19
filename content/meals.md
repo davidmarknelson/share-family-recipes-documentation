@@ -2,25 +2,11 @@
 
 ### Get Available Meal Name
 
-Checks for meal name availability.
+Checks for meal name availability. The responses have no body.
+The responses will either have a status of `204` for available names or `400` for taken names.
 
 ```endpoint
 GET /meals/available-names?name={nameofmeal}
-```
-#### Example Response (200)
-
-```json
-{
-  "message": "This meal name is available."
-}
-```
-
-#### Example Response (400)
-
-```json
-{
-  "message": "This meal name is already taken."
-}
 ```
 
 ### Create Meal
