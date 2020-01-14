@@ -30,7 +30,9 @@ GET /search/newest?offset={0}&limit={10}
     {
       "id": 1,
       "difficulty": 1,
-      "mealPic": "public/images/mealPics/Eggs-and-Rice.jpeg",
+      "mealPic": {
+        "mealPicName": "cloudinaryurl"
+      },
       "name": "Eggs and Rice",
       "cookTime": 20,
       "creatorId": 1,
@@ -39,7 +41,11 @@ GET /search/newest?offset={0}&limit={10}
         "profilePic": null
       },
       "likes": [
-        { "id": 1 }
+        { "userId": 1 }
+      ],
+      "savedRecipes": [
+        { "userId": 1 }
+
       ]
     }
   ]
@@ -50,7 +56,7 @@ GET /search/newest?offset={0}&limit={10}
 
 ```json
 {
-  "message": "There are no meals."
+  "message": "There are no recipes."
 }
 ```
 
@@ -58,7 +64,7 @@ GET /search/newest?offset={0}&limit={10}
 
 ```json
 {
-  "message": "There was an error getting the list of meals."
+  "message": "There was an error getting the list of recipes."
 }
 ```
 
@@ -106,7 +112,10 @@ GET /search/byuser-a-z?name={johndoe}&offset={0}&limit={10}
         "profilePic": null
       },
       "likes": [
-        { "id": 2 }
+        { "userId": 2 }
+      ],
+      "savedRecipes": [
+        { "userId": 2 }
       ]
     }
   ]
@@ -125,7 +134,7 @@ GET /search/byuser-a-z?name={johndoe}&offset={0}&limit={10}
 
 ```json
 {
-  "message": "There was an error getting the list of meals."
+  "message": "There was an error getting the list of recipes."
 }
 ```
 
@@ -167,7 +176,8 @@ GET /search/byingredients-a-z?ingredient={egg}&ingredient={rice}&offset={0}&limi
         "username": "johndoe",
         "profilePic": null
       },
-      "likes": []
+      "likes": [],
+      "savedRecipes": []
     }
   ]
 }
@@ -181,7 +191,7 @@ HTTP Status Code | Error Message | Description
 |---|---|---
 `400` | `You must add ingredients to the search.` | No ingredients were added to the search.
 `404` | `There are no meals with those ingredients.` | No meals match the request.
-`500` | `There was an error getting the list of meals.` | A server error occured.
+`500` | `There was an error getting the list of recipes.` | A server error occured.
 
 ### Get List of Meals By Name
 
@@ -210,6 +220,6 @@ GET /search/name?name={egg}
 
 ```json
 {
-  "message": "There was an error getting the list of meals."
+  "message": "There was an error getting the list of recipes."
 }
 ```

@@ -2,7 +2,7 @@
 
 ### Add Like
 
-Add the user's JWT to the authorization header as a bearer token and the id of the meal in the property `mealId` to the body of a POST request.
+Add the user's JWT to the authorization header as a bearer token and the id of the meal in the property `recipeId` to the body of a POST request.
 
 ```endpoint
 POST /likes/add
@@ -12,7 +12,7 @@ POST /likes/add
 
 ```json
 {
-  "message": "Meal successfully liked."
+  "message": "Recipe successfully liked."
 }
 ```
 
@@ -20,7 +20,7 @@ POST /likes/add
 
 ```json
 {
-  "message": "You have already liked this meal."
+  "message": "You have already liked this recipe."
 }
 ```
 
@@ -28,13 +28,13 @@ POST /likes/add
 
 ```json
 {
-  "message": "There was an error liking this meal."
+  "message": "There was an error liking this recipe."
 }
 ```
 
 ### Remove Like
 
-Add the user's JWT to the authorization header as a bearer token and the id of the meal in the property `mealId` to the body of a DELETE request.
+Add the user's JWT to the authorization header as a bearer token and the id of the meal in the property `recipeId` to the body of a DELETE request.
 
 ```endpoint
 DELETE /likes/remove
@@ -44,7 +44,7 @@ DELETE /likes/remove
 
 ```json
 {
-  "message": "Meal successfully unliked."
+  "message": "Recipe successfully unliked."
 }
 ```
 
@@ -52,6 +52,6 @@ DELETE /likes/remove
 
 ```json
 {
-  "message": "There was an error unliking this meal."
+  "message": "There was an error unliking this recipe."
 }
 ```

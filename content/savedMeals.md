@@ -2,7 +2,7 @@
 
 ### Get User's Saved Meals
 
-For the 4 endpoints below, both responses are standardized, only the order will change.
+For the 2 endpoints below, both responses are standardized, only the order will change.
 
 Add the user's JWT to the authorization header as a bearer token.
 
@@ -21,6 +21,10 @@ HTTP Method | Endpoint | Description
 GET /saved/a-z?offset={0}&limit={10}
 ```
 
+```endpoint
+GET /saved/z-a?offset={0}&limit={10}
+```
+
 #### Example Response (200)
 
 ```json
@@ -30,7 +34,9 @@ GET /saved/a-z?offset={0}&limit={10}
     {
       "id": 1,
       "difficulty": 1,
-      "mealPic": null,
+      "mealPic": {
+        "mealPicName": "cloudinaryurl"
+      },
       "name": "Eggs and Rice",
       "cookTime": 20,
       "creatorId": 1,
@@ -38,7 +44,8 @@ GET /saved/a-z?offset={0}&limit={10}
         "username": "johndoe",
         "profilePic": null
       },
-      "likes": []
+      "likes": [],
+      "savedRecipes": []
     }
   ]
 }
@@ -48,7 +55,7 @@ GET /saved/a-z?offset={0}&limit={10}
 
 ```json
 {
-  "message": "You have not saved any meals."
+  "message": "You have not saved any recipes."
 }
 ```
 
@@ -56,13 +63,13 @@ GET /saved/a-z?offset={0}&limit={10}
 
 ```json
 {
-  "message": "There was an error getting your list of saved meals."
+  "message": "There was an error getting your list of saved recipes."
 }
 ```
 
 ### Save meal
 
-Add the user's JWT to the authorization header as a bearer token and the id of the meal in the property `mealId` to the body of a POST request.
+Add the user's JWT to the authorization header as a bearer token and the id of the meal in the property `recipeId` to the body of a POST request.
 
 ```endpoint
 POST /saved/save
@@ -72,7 +79,7 @@ POST /saved/save
 
 ```json
 {
-  "message": "Meal successfully saved."
+  "message": "Recipe successfully saved."
 }
 ```
 
@@ -80,14 +87,14 @@ POST /saved/save
 
 ```json
 {
-  "message": "There was an error saving this meal."
+  "message": "There was an error saving this recipe."
 }
 ```
 
 
 ### Unsave Meal
 
-Add the user's JWT to the authorization header as a bearer token and the id of the meal in the property `mealId` to the body of a DELETE request.
+Add the user's JWT to the authorization header as a bearer token and the id of the meal in the property `recipeId` to the body of a DELETE request.
 
 ```endpoint
 DELETE /saved/unsave
@@ -97,7 +104,7 @@ DELETE /saved/unsave
 
 ```json
 {
-  "message": "Meal successfully unsaved."
+  "message": "Recipe successfully unsaved."
 }
 ```
 
@@ -105,6 +112,6 @@ DELETE /saved/unsave
 
 ```json
 {
-  "message": "There was an error unsaving this meal."
+  "message": "There was an error unsaving this recipe."
 }
 ```

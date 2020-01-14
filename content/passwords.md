@@ -64,7 +64,7 @@ PUT /password/reset
 
 ```json
 {
-  "message": "Your password was successfully reset."
+  "message": "Your password was successfully reset. Please log in with your new password."
 }
 ```
 

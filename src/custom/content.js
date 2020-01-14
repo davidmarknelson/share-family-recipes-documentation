@@ -29,4 +29,6 @@ module.exports =
   '# Saved Meals\n' +
   fs.readFileSync('./content/savedMeals.md', 'utf8') + '\n' +
   '# Likes\n' +
-  fs.readFileSync('./content/likes.md', 'utf8') + '\n';
+  fs.readFileSync('./content/likes.md', 'utf8') + '\n' +
+  '# Tests\n' +
+  fs.readFileSync('./content/tests.md', 'utf8') + '\n';
