@@ -115,3 +115,37 @@ DELETE /saved/unsave
   "message": "There was an error unsaving this recipe."
 }
 ```
+
+### Get Recipe Saved Recipe Ids
+
+Returns an ordered array of `{ userId: 1 }` for all users who have saved the recipe.  
+Add the recipe id to the `recipeId` query
+
+```endpoint
+DELETE /saved/recipe-saved-recipes?recipeId=1
+```
+
+#### Example Response (200)
+
+```json
+[
+  {
+    "userId": 1
+  }
+]
+```
+
+#### Example Response (404)
+
+```json
+{
+  "message": "That recipe does not exist."
+}
+```
+
+#### Example Response (500)
+
+```json
+{
+  "message": "There was an error."
+}

@@ -2,7 +2,9 @@
 
 ### Get List of Meals
 
-For the 4 endpoints below, all responses are standardized, only the order will change.
+For the 4 endpoints below, all responses are standardized, only the order will change.  
+
+All recipe objects with `likes` and `savedRecipes` will be ascending ordered arrays.  
 
 Query parameters for `offset` and `limit` should be added to each request. If those parameters are not added, the default values will be `0` and `10` respectively.
 

@@ -55,3 +55,38 @@ DELETE /likes/remove
   "message": "There was an error unliking this recipe."
 }
 ```
+
+### Get Recipe Likes
+
+Returns an ordered array of `{ userId: 1 }` for all users who have liked the recipe.  
+Add the recipe id to the `recipeId` query
+
+```endpoint
+DELETE /likes/recipe-likes?recipeId=1
+```
+
+#### Example Response (200)
+
+```json
+[
+  {
+    "userId": 1
+  }
+]
+```
+
+#### Example Response (404)
+
+```json
+{
+  "message": "That recipe does not exist."
+}
+```
+
+#### Example Response (500)
+
+```json
+{
+  "message": "There was an error."
+}
+```
