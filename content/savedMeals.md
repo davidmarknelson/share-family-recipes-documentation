@@ -69,7 +69,7 @@ GET /saved/z-a?offset={0}&limit={10}
 
 ### Save meal
 
-Add the user's JWT to the authorization header as a bearer token and the id of the meal in the property `recipeId` to the body of a POST request.
+Add the user's JWT to the authorization header as a bearer token and the id of the meal in the property `recipeId` to the body of a POST request. It will return an array of the meal's users who have saved the meal.
 
 ```endpoint
 POST /saved/save
@@ -78,9 +78,9 @@ POST /saved/save
 #### Example Response (200)
 
 ```json
-{
-  "message": "Recipe successfully saved."
-}
+[
+  { "userId": 1 }
+]
 ```
 
 #### Example Response (500)
@@ -94,18 +94,10 @@ POST /saved/save
 
 ### Unsave Meal
 
-Add the user's JWT to the authorization header as a bearer token and the id of the meal in the property `recipeId` to the body of a DELETE request.
+Add the user's JWT to the authorization header as a bearer token and the id of the meal in the property `recipeId` to the body of a DELETE request. On success, it will return a success with a status of `204` and no content in the body.  
 
 ```endpoint
 DELETE /saved/unsave
-```
-
-#### Example Response (200)
-
-```json
-{
-  "message": "Recipe successfully unsaved."
-}
 ```
 
 #### Example Response (500)
@@ -115,37 +107,3 @@ DELETE /saved/unsave
   "message": "There was an error unsaving this recipe."
 }
 ```
-
-### Get Recipe Saved Recipe Ids
-
-Returns an ordered array of `{ userId: 1 }` for all users who have saved the recipe.  
-Add the recipe id to the `recipeId` query
-
-```endpoint
-DELETE /saved/recipe-saved-recipes?recipeId=1
-```
-
-#### Example Response (200)
-
-```json
-[
-  {
-    "userId": 1
-  }
-]
-```
-
-#### Example Response (404)
-
-```json
-{
-  "message": "That recipe does not exist."
-}
-```
-
-#### Example Response (500)
-
-```json
-{
-  "message": "There was an error."
-}
